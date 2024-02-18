@@ -5,11 +5,11 @@ import { mediaData } from '../assets/mediaLinks';
 const UserFooter = () => {
   return (
     <>
-      <div className="flex justify-center w-[100%] sm:w-[80%] sm:mx-auto md:w-[60%]">
+      <div className="flex w-[50%] h-20">
         {mediaData.map((item) => (
-          <div key={item.id} className=" inset-0 bottom-0">
+          <div key={item.id} className="flex inset-0 bottom-0 ml-[-10px]">
             <a href={item.link}>
-              <item.title className="text-[28px] sm:text-[32px] md:text-[40px] mx-4 sm:mx-6 md:mx-10 active:scale-90"/>
+              <item.title className="text-[28px] mx-3 lg:mx-16 md:text-[32px] active:scale-90"/>
             </a>
           </div>
         ))}

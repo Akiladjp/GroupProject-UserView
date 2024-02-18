@@ -4,8 +4,7 @@ import { FaSearch, FaUser } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const UserNavigation = () => {
-
-  const[click, setClick] = useState(false);
+  const [click, setClick] = useState(false);
 
   const closeMenu = () => setClick(false);
 
@@ -24,48 +23,45 @@ const UserNavigation = () => {
             <FaSearch className="flex items-center m-auto mx-auto text-[16px]" />
           </div>
           <div className="md:m-auto">
-            <button className="flex text-[14px] py-2 border ml-2 pr-2 md:px-4 md:text-[20px] rounded-full active:scale-95 bg-blue-400">
+            <Link
+              to="/userprofile"
+              className="flex text-[14px] py-2 border ml-2 mx-auto pl-2 px-4 md:text-[20px] rounded-full text-white active:scale-95 bg-blue-800 hover:cursor-pointer"
+            >
               <FaUser className="m-auto text-[16px] mx-2" /> Profile
-            </button>
+            </Link>
           </div>
         </div>
-        <div className="grid grid-cols-3 list-none justify-between mx-4 mt-10 mx:flex md:my-auto md:py-5">
-            <li className="bg-[#00BA13] text-white px-4 py-2 rounded-2xl w-24 flex hover:cursor-pointer">
-              <Link
-                to="/mainitems"
-                spy={true}
-                smooth={true}
-                duration={500}
-                onClick={closeMenu}
-                id="mainitems"
-              >
-                Main
-              </Link>
-            </li>
-            <li className="bg-[#00BA13] text-white px-4 py-2 rounded-2xl w-24 flex hover:cursor-pointer">
-              <Link
-                to="/drinksitems"
-                spy={true}
-                smooth={true}
-                duration={500}
-                onClick={closeMenu}
-                id="drinksitems"
-              >
-                Drinks
-              </Link>
-            </li>
-            <li className="bg-[#00BA13] text-white px-4 py-2 rounded-2xl w-24 flex hover:cursor-pointer">
-              <Link
-                to="/dessertitems"
-                spy={true}
-                smooth={true}
-                duration={500}
-                onClick={closeMenu}
-                id="dessertitems"
-              >
-                Desserts
-              </Link>
-            </li>
+        <div className="grid grid-cols-3 list-none justify-between mx-2 mt-10 mx:flex md:my-auto md:py-5">
+          <li className="bg-[#327f1f] text-white px-4 py-2 rounded-2xl w-24 flex hover:cursor-pointer">
+            <Link
+              to="mainitems"
+              smooth={true} offset={0} duration={500}
+              onClick={closeMenu}
+              id="mainitems"
+            >
+              Main
+            </Link>
+          </li>
+          <li className="bg-[#1f7f2d] text-white px-4 py-2 rounded-2xl w-24 flex hover:cursor-pointer">
+            <Link
+              to="drinksitems"
+              smooth={true} offset={1200} duration={500}
+              onClick={closeMenu}
+              id="drinksitems"
+            >
+              Drinks
+            </Link>
+          </li>
+          <li className="bg-[#1f7f2d] text-white px-4 py-2 rounded-2xl w-24 flex hover:cursor-pointer">
+            <Link
+              to="dessertitems"
+              smooth={true} offset={1800} duration={500}
+              onClick={closeMenu}
+              id="dessertitems"
+            >
+              Desserts
+            </Link>
+          </li>
         </div>
       </div>
     </>

@@ -15,15 +15,15 @@ const ItemCard = () => {
   };
 
   return (
-    <div className="flex w-[100%] sm:w-[100%] md:w-[80%] lg:w-[50%] border rounded-2xl shadow-md shadow-green-200">
+    <div className="flex w-[95%] md:w-[95%] lg:w-[95%] border rounded-2xl shadow-md shadow-green-200 bg-white">
       <div className="ml-4 text-left w-[70%]">
-        <h2 className="text-[16px] font-bold my-2 sm:text-[20px] md:text-[24px]">
+        <h2 className="text-[16px] font-bold my-2 sm:text-[20px] md:text-[20px]">
           Chicken Full Kottu
         </h2>
-        <h3 className="font-bold text-[14px] sm:text-[18px] md:text-[20px] lg:mt-4">
+        <h3 className="font-bold text-[14px] sm:text-[18px] md:text-[18px] lg:mt-4">
           Rs:1200/=
         </h3>
-        <div className="flex items-center lg:mt-4">
+        <div className="flex items-center lg:mt-4 w-[50%] md:mb-2 float-start">
           <div className="flex text-[12px] md:text-[20px] md:mt-4 mt-2 py-1.5 rounded-xl bg-slate-100">
             <button className="mx-2" onClick={remove} disabled={isCount==0}>
               {" "}

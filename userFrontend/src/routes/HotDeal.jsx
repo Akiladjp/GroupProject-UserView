@@ -1,13 +1,16 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
-import ItemCard from "../components/ItemCard";
+// eslint-disable-next-line no-unused-vars
+import React from 'react'
+import ItemCard from '../components/ItemCard'
 
-const DrinkItems = () => {
+
+const HotDeal = () => {
   return (
-    <div id="drinksitems">
-      <hr />
-      <h1 className='flex justify-center  text-xl font-bold'>Drinks</h1>
-      <hr />
+    <div>
+      <div>
+        <hr />
+        <h1 className='flex justify-center text-xl font-bold'>Hot Deals 🍔</h1>
+        <hr />
+      </div>
       <div className="md:grid grid-cols-2 mt-6">
         <div className="mb-8">
           <ItemCard />
@@ -23,7 +26,7 @@ const DrinkItems = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default DrinkItems;
+export default HotDeal
