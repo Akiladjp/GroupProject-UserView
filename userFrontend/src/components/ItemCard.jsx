@@ -2,10 +2,12 @@
 import React, { useState } from "react";
 import kottu from "../assets/kottu-6319357_1280.jpg";
 
-const ItemCard = () => {
+const ItemCard = (props)=> {
   const [isCount, setIsCount] = useState(0);
 
-
+ 
+  const buttonColor = props.buttonState === "Remove" ? "bg-red-600" : "bg-blue";
+  console.log(buttonColor);
   const remove = () => {
     setIsCount(isCount - 1);
   };
@@ -15,7 +17,7 @@ const ItemCard = () => {
   };
 
   return (
-    <div className="flex w-[100%] sm:w-[100%] md:w-[80%] lg:w-[50%] border rounded-2xl shadow-md shadow-green-200">
+    <div className="flex w-[100%] sm:w-[100%] md:w-[80%] lg:w-[50%] border rounded-2xl shadow-md shadow-green-200 m-auto">
       <div className="ml-4 text-left w-[70%]">
         <h2 className="text-[16px] font-bold my-2 sm:text-[20px] md:text-[24px]">
           Chicken Full Kottu
@@ -29,21 +31,22 @@ const ItemCard = () => {
               {" "}
               -{" "}
             </button>
-            <p className="mx-2 flex items-center font-bold">{isCount}</p>
+            <p className="flex items-center mx-2 font-bold">{isCount}</p>
             <button className="mx-2" onClick={add}>
               {" "}
               +{" "}
             </button>
           </div>
           <div className="ml-8">
-            <button className="mt-2 bg-blue-500 rounded-md font-bold text-white py-1 px-2 text-[12px] md:text-[20px] md:mt-4 active:bg-blue-700">
-              {" "}
-              Add{" "}
+          <button className={`mt-2 ${buttonColor} rounded-md font-bold text-white py-1 px-2 text-[12px] md:text-[20px] md:mt-4 active:${buttonColor}`}>
+              {props.buttonState}{" "}
+           {console.log(props.buttonState)}
+
             </button>
           </div>
         </div>
       </div>
-      <div className="w-[125px] sm:w-[160px] lg:w-[200px]">
+      <div className="w-[125px] sm:w-[160px] lg:w-[200px] ">
         <img
           className="rounded-l-none rounded-2xl float-[30%]"
           src={kottu}

@@ -6,7 +6,11 @@ export default {
   ],
 
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage:{
+        'food':"url(src/assets/kottu-6319357_1280.jpg)"
+      }
+    },
   },
   plugins: [],
 }
