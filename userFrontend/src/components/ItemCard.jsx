@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import kottu from "../assets/kottu-6319357_1280.jpg";
+import { Link } from "react-router-dom";
 
-const ItemCard = () => {
+const ItemCard = (props) => {
   const [isCount, setIsCount] = useState(0);
 
-
+  const buttonColor = props.buttonState === "Remove" ? "bg-red-600" : "bg-blue-600";
+  
   const remove = () => {
     setIsCount(isCount - 1);
   };
@@ -29,20 +31,21 @@ const ItemCard = () => {
               {" "}
               -{" "}
             </button>
-            <p className="mx-2 flex items-center font-bold">{isCount}</p>
+            <p className="flex items-center mx-2 font-bold">{isCount}</p>
             <button className="mx-2" onClick={add}>
               {" "}
               +{" "}
             </button>
           </div>
           <div className="ml-8">
-            <button className="mt-2 bg-blue-500 rounded-md font-bold text-white py-1 px-2 text-[12px] md:text-[20px] md:mt-4 active:bg-blue-700">
-              {" "}
-              Add{" "}
+            <button className={`mt-2 bg-blue-500 rounded-md font-bold text-white py-1 px-2 text-[12px] md:text-[20px] md:mt-4  ${buttonColor} active:${buttonColor}`}>
+            {props.buttonState}
+              
             </button>
           </div>
         </div>
       </div>
+      <Link to="/itemview">
       <div className="w-[125px] sm:w-[160px] lg:w-[200px]">
         <img
           className="rounded-l-none rounded-2xl float-[30%]"
@@ -50,6 +53,7 @@ const ItemCard = () => {
           alt="food"
         />
       </div>
+      </Link>
     </div>
   );
 };

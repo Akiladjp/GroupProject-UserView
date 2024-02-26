@@ -11,6 +11,7 @@ const UserNavigation = () => {
   return (
     <>
       <div className="mt-4">
+       
         <div className="flex w-[90%] md:w-[50%] md:mx-2 md:float-end md:mt-[20px]">
           <div className="flex border border-black rounded-full w-[70%] md:w-[60%] md:ml-16 md:my-auto">
             <input
@@ -23,15 +24,15 @@ const UserNavigation = () => {
             <FaSearch className="flex items-center m-auto mx-auto text-[16px]" />
           </div>
           <div className="md:m-auto">
-            <Link
-              to="/userprofile"
-              className="flex text-[14px] py-2 border ml-2 mx-auto pl-2 px-4 md:text-[20px] rounded-full text-white active:scale-95 bg-blue-800 hover:cursor-pointer"
-            >
-              <FaUser className="m-auto text-[16px] mx-2" /> Profile
-            </Link>
+           <a href="/userprofile"  className="flex text-[14px] py-2 border ml-2 mx-auto pl-2 px-4 md:text-[20px] rounded-full text-white active:scale-95 bg-blue-800 hover:cursor-pointer">
+           <FaUser className="m-auto text-[16px] mx-2" /> Profile
+           
+           </a>
+            
+           
           </div>
         </div>
-        <div className="grid grid-cols-3 list-none justify-between mx-2 mt-10 mx:flex md:my-auto md:py-5">
+        <div className="grid justify-between grid-cols-3 mx-2 mt-10 list-none mx:flex md:my-auto md:py-5">
           <li className="bg-[#327f1f] text-white px-4 py-2 rounded-2xl w-24 flex hover:cursor-pointer">
             <Link
               to="mainitems"

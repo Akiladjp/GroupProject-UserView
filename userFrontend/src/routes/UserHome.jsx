@@ -9,6 +9,7 @@ import DrinkItems from "./DrinkItems";
 import DessertItem from "./DessertItem";
 import HotDeal from "./HotDeal";
 import Headroom from "react-headroom";
+import { Link } from "react-router-dom";
 
 const UserHome = () => {
   const [show, setShow] = useState(false)
@@ -36,7 +37,7 @@ const UserHome = () => {
           </div>
         </Headroom>
 
-          <div className="bg-white py-4">
+          <div className="py-4 bg-white">
             <UserNavigation />
           </div>
       </div>
@@ -46,12 +47,13 @@ const UserHome = () => {
         <DrinkItems />
         <DessertItem />
       </div>
-      <div className="bottom-0 flex fixed bg-white w-full">
+      <div className="fixed bottom-0 flex w-full bg-white">
         <UserFooter />
       </div>
+      <Link to="/submenucart">
       <div className="fixed text-[35px] bg-white p-3 rounded-full bottom-24 right-4 border border-0.5 shadow-lg active:scale-90">
         <FaCartPlus />
-      </div>
+      </div></Link>
     </div>
   );
 };
