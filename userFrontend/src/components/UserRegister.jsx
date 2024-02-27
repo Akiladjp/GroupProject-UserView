@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import kaemaLogo from "../assets/kaema logo.png";
+import kaemaLogo from "../assets/kaema_logo.png";
 import UserFooter from "./UserFooter";
 
 const UserRegister = () => {
@@ -17,7 +17,7 @@ const UserRegister = () => {
             id="userPhoneNumber"
             placeholder="Enter your phone number"
             required
-            className="border border-black rounded-full px-20 py-4"
+            className="px-20 py-4 border border-black rounded-full"
           />
           <br />
           <br />
@@ -25,7 +25,7 @@ const UserRegister = () => {
             type="submit"
             value="Register"
             id="userRegister"
-            className="bg-green-600 text-white py-2 px-8 rounded-full active:scale-95 active:bg-green-800"
+            className="px-8 py-2 text-white bg-green-600 rounded-full active:scale-95 active:bg-green-800"
           />
         </form>
       </div>

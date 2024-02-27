@@ -1,3 +1,20 @@
 * {
   margin: auto;
 }
+.low {
+  color: #f1c40f; /* Yellow color for low rating */
+}
+
+.medium {
+  color: #e67e22; /* Orange color for medium rating */
+}
+
+.high {
+  color: #e74c3c; /* Red color for high rating */
+}
+
+Link {
+  cursor: pointer;
+  background-color: #e74c3c;
+}
+
