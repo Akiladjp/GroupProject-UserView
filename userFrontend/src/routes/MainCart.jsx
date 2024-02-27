@@ -5,6 +5,7 @@ import kaemaLogo from "../assets/kaema_logo.png";
 import MyTimer from "../components/MyTimer";
 
 export default function MainCart() {
+  // gnfhgghj
   return (
     <>
       <div className=" w-[99%] p-[0.25%] m-auto h-screen  flex flex-col justify-end ">
